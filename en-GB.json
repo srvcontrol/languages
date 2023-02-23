@@ -1,0 +1,187 @@
+{
+  "error": {
+    "title": "Oops!",
+    "messages": {
+      "failed_database": "Something went wrong while communicating with my database.",
+      "failed_pterodactyl": "Something went wrong while communicating with your panel.",
+      "failed_encrypt": "Something went wrong while encrypting your API key.",
+      "failed_decrypt": "Something went wrong while decrypting your API key.",
+      "invalid_key": "Your API key is invalid.",
+      "no_profile": "You don't have a profile.",
+      "no_active_profile": "You don't have an active profile.",
+      "server_not_found": "I couldn't find a server with the name or ID '{{ .server }}'.",
+      "server_offline": "The server '{{ .server }}' is currently offline."
+    }
+  },
+  "success": {
+    "title": "Success!"
+  },
+  "command": {
+    "servers": {
+      "name": "servers",
+      "description": "View the servers you have access to.",
+      "embed": {
+        "title": "Your Servers",
+        "fields": {
+          "relation": {
+            "name": "Relation",
+            "owner": "Owner",
+            "subuser": "Subuser"
+          },
+          "disk": {
+            "name": "Disk Space"
+          }
+        }
+      },
+      "menu": {
+        "placeholder": "Select a server."
+      },
+      "buttons": {
+        "console": "Console",
+        "files": "Files",
+        "databases": "Databases"
+      }
+    },
+    "power": {
+      "name": "Power",
+      "description": "Control power for your server.",
+      "messages": {
+        "sent_start": "The start signal was sent to your server.",
+        "sent_restart": "The restart signal was sent to your server.",
+        "sent_stop": "The stop signal signal was sent to your server.",
+        "sent_kill": "The kill signal was sent to your server."
+      },
+      "embed": {
+        "title": "Power",
+        "description": "Use the buttons below to send power signals to your server.",
+        "fields": {
+          "current_state": {
+            "name": "Current State",
+            "values": {
+              "running": "Online",
+              "offline": "Offline",
+              "starting": "Starting",
+              "stopping": "Stopping"
+            }
+          }
+        }
+      },
+      "buttons": {
+        "start": "Start",
+        "restart": "Restart",
+        "stop": "Stop",
+        "kill": "Kill"
+      },
+      "options": {
+        "server": {
+          "name": "server",
+          "description": "The name or ID of a server."
+        }
+      }
+    },
+    "profile": {
+      "name": "profile",
+      "messages": {
+        "no_profile": "You don't have a profile with the name '{{ .profile }}'.",
+        "already_exists": "You already have a profile named '{{ .profile }}'.",
+        "max_profiles": "You can't have more than **{{ .limit }}** profiles."
+      },
+      "create": {
+        "name": "create",
+        "description": "Create a new profile.",
+        "messages": {
+          "invalid_domain": "The domain '{{ .domain }}' is invalid.",
+          "created": "The profile '{{ .profile }}' was created successfully!"
+        },
+        "options": {
+          "profile_name": {
+            "name": "name",
+            "description": "What would you like to call this profile?"
+          },
+          "panel": {
+            "name": "panel",
+            "description": "What is your panel domain?"
+          },
+          "apikey": {
+            "name": "apikey",
+            "description": "What is your API key?"
+          }
+        }
+      },
+      "default": {
+        "name": "default",
+        "description": "Set a profile as your default.",
+        "messages": {
+          "changed": "Your default profile is now '{{ .profile }}'."
+        },
+        "options": {
+          "profile_name": {
+            "name": "profile",
+            "description": "Which profile do you want to set as your default?"
+          }
+        }
+      },
+      "delete": {
+        "name": "delete",
+        "description": "Delete a profile.",
+        "messages": {
+          "deleted": "You have deleted the profile '{{ .profile }}'.",
+          "cannot_delete_default": "You can't delete your default profile."
+        },
+        "options": {
+          "profile_name": {
+            "name": "profile",
+            "description": "Which profile do you want to delete?"
+          }
+        }
+      },
+      "rename": {
+        "name": "rename",
+        "description": "Rename one of your profiles.",
+        "messages": {
+          "renamed": "The profile '{{ .oldname }}' was renamed to '{{ .newname }}'."
+        },
+        "options": {
+          "profile_name": {
+            "name": "profile",
+            "description": "Which profile do you want to rename?"
+          },
+          "new_name": {
+            "name": "newname",
+            "description": "The new name of the profile."
+          }
+        }
+      },
+      "use": {
+        "name": "use",
+        "description": "Use a specific profile in this server.",
+        "messages": {
+          "using": "You are now using the profile '{{ .profile }}' in this server."
+        },
+        "options": {
+          "profile_name": {
+            "name": "use",
+            "description": "Which profile do you want to use?"
+          }
+        }
+      }
+    },
+    "send": {
+      "name": "send",
+      "description": "Send a command to one of your servers.",
+      "messages": {
+        "sent": "The command was sent to the server '{{ .server }}' successfully."
+      },
+      "options": {
+        "server": {
+          "name": "server",
+          "description": "The name or ID of a server"
+        },
+        "command": {
+          "name": "command",
+          "description": "The command to send to the server."
+        }
+      }
+    }
+  }
+}
