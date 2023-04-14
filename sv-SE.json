@@ -1,0 +1,187 @@
+{
+  "error": {
+    "title": "Hoppsan!",
+    "messages": {
+      "failed_database": "Något gick fel vid kommunikation med min databas.",
+      "failed_pterodactyl": "Något gick fel vid kommunikation med din panel.",
+      "failed_encrypt": "Något gick fel vid kryptering av din API-nyckel.",
+      "failed_decrypt": "Något gick fel vid dekryptering av din API-nyckel.",
+      "invalid_key": "Din API-nyckel är ogiltig.",
+      "no_profile": "Du har ingen profil.",
+      "no_active_profile": "Du har ingen aktiv profil.",
+      "server_not_found": "Jag kunde inte hitta en server med namnet eller ID:et '{{ .server }}'.",
+      "server_offline": "Servern '{{ .server }}' är för närvarande offline."
+    }
+  },
+  "success": {
+    "title": "Lyckat!"
+  },
+  "command": {
+    "servers": {
+      "name": "servrar",
+      "description": "Se servrar som du har åtkomst till.",
+      "embed": {
+        "title": "Dina servrar",
+        "fields": {
+          "relation": {
+            "name": "Relation",
+            "owner": "Ägare",
+            "subuser": "Underanvändare"
+          },
+          "disk": {
+            "name": "Diskutrymme"
+          }
+        }
+      },
+      "menu": {
+        "placeholder": "Välj en server."
+      },
+      "buttons": {
+        "console": "Konsol",
+        "files": "Filer",
+        "databases": "Databaser"
+      }
+    },
+    "power": {
+      "name": "Kraft",
+      "description": "Styrkraft för din server.",
+      "messages": {
+        "sent_start": "Start signalen har skickats till din server.",
+        "sent_restart": "Omstart signalen har skickats till din server.",
+        "sent_stop": "Stopp signalen har skickats till din server.",
+        "sent_kill": "Avbrut signalen har skickats till din server."
+      },
+      "embed": {
+        "title": "Kraft",
+        "description": "Använd knapparna nedan för att skicka signaler till din server.",
+        "fields": {
+          "current_state": {
+            "name": "Aktuell status",
+            "values": {
+              "running": "Online",
+              "offline": "Offline",
+              "starting": "Startar",
+              "stopping": "Stoppar"
+            }
+          }
+        }
+      },
+      "buttons": {
+        "start": "Starta",
+        "restart": "Starta om",
+        "stop": "Stoppa",
+        "kill": "Avbryt"
+      },
+      "options": {
+        "server": {
+          "name": "server",
+          "description": "Namnet eller ID:et för en server."
+        }
+      }
+    },
+    "profile": {
+      "name": "profil",
+      "messages": {
+        "no_profile": "Du har ingen profil med namnet '{{ .profile }}'.",
+        "already_exists": "Du har redan en profil med namnet '{{ .profile }}'.",
+        "max_profiles": "Du kan inte ha fler än **{{ .limit }}** profiler."
+      },
+      "create": {
+        "name": "skapa",
+        "description": "Skapa en ny profil.",
+        "messages": {
+          "invalid_domain": "Domänen '{{ .domain }}' är ogiltig.",
+          "created": "Profilen '{{ .profile }}' skapades!"
+        },
+        "options": {
+          "profile_name": {
+            "name": "namn",
+            "description": "Vad skulle du vilja kalla den här profilen?"
+          },
+          "panel": {
+            "name": "panel",
+            "description": "Vad är din paneldomän?"
+          },
+          "apikey": {
+            "name": "apinyckel",
+            "description": "Vad är din API-nyckel?"
+          }
+        }
+      },
+      "default": {
+        "name": "standard",
+        "description": "Ställ in en profil som standard.",
+        "messages": {
+          "changed": "Din standardprofil är nu '{{ .profile }}'."
+        },
+        "options": {
+          "profile_name": {
+            "name": "profil",
+            "description": "Vilken profil vill du ställa in som standard?"
+          }
+        }
+      },
+      "delete": {
+        "name": "radera",
+        "description": "Radera en profil.",
+        "messages": {
+          "deleted": "Du har raderat profilen '{{ .profile }}'.",
+          "cannot_delete_default": "Du kan inte radera din standardprofil."
+        },
+        "options": {
+          "profile_name": {
+            "name": "profil",
+            "description": "Vilken profil vill du radera?"
+          }
+        }
+      },
+      "rename": {
+        "name": "bytnamn",
+        "description": "Byt namn på en av dina profiler.",
+        "messages": {
+          "renamed": "Profilen '{{ .oldname }}' döptes om till '{{ .newname }}'."
+        },
+        "options": {
+          "profile_name": {
+            "name": "profil",
+            "description": "Vilken profil vill du byta namn på?"
+          },
+          "new_name": {
+            "name": "nyttnamn",
+            "description": "Det nya namnet på profilen."
+          }
+        }
+      },
+      "use": {
+        "name": "använd",
+        "description": "Använd en specifik profil på den här servern.",
+        "messages": {
+          "using": "Du använder nu profilen '{{ .profile }}' i denna server."
+        },
+        "options": {
+          "profile_name": {
+            "name": "använd",
+            "description": "Vilken profil vill du använda?"
+          }
+        }
+      }
+    },
+    "send": {
+      "name": "skicka",
+      "description": "Skicka ett kommando till en av dina servrar.",
+      "messages": {
+        "sent": "Kommandot skickades till servern '{{ .server }}'."
+      },
+      "options": {
+        "server": {
+          "name": "server",
+          "description": "Namnet eller ID för en server"
+        },
+        "command": {
+          "name": "kommando",
+          "description": "Kommandot att skicka till servern."
+        }
+      }
+    }
+  }
+}
