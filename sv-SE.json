@@ -2,6 +2,7 @@
   "error": {
     "title": "Hoppsan!",
     "messages": {
+      "failed_console": "Something went wrong while communicating with the SRVControl console service.",
       "failed_database": "Något gick fel vid kommunikation med min databas.",
       "failed_pterodactyl": "Något gick fel vid kommunikation med din panel.",
       "failed_encrypt": "Något gick fel vid kryptering av din API-nyckel.",
@@ -10,6 +11,7 @@
       "no_profile": "Du har ingen profil.",
       "no_active_profile": "Du har ingen aktiv profil.",
       "server_not_found": "Jag kunde inte hitta en server med namnet eller ID:et '{{ .server }}'.",
+      "console_not_found": "I couldn't find a console with the name '{{ .console }}'.",
       "server_offline": "Servern '{{ .server }}' är för närvarande offline."
     }
   },
@@ -17,6 +19,43 @@
     "title": "Lyckat!"
   },
   "command": {
+    "console": {
+      "name": "console",
+      "create": {
+        "name": "create",
+        "description": "Create a new console session.",
+        "messages": {
+          "created_session": "Successfully created the console session '{{ .console }}'."
+        },
+        "options": {
+          "console_name": {
+            "name": "name",
+            "description": "What would you like to call this session?"
+          },
+          "server": {
+            "name": "server",
+            "description": "Which one of your servers is this session for?"
+          },
+          "webhook_url": {
+            "name": "webhook_url",
+            "description": "The Discord webhook URL to send messages to."
+          }
+        }
+      },
+      "delete": {
+        "name": "delete",
+        "description": "Delete one of your console sessions.",
+        "messages": {
+          "deleted_session": "The console session '{{ .console }}' was deleted."
+        },
+        "options": {
+          "console": {
+            "name": "console",
+            "description": "Which console session would you like to delete?"
+          }
+        }
+      }
+    },
     "servers": {
       "name": "servrar",
       "description": "Se servrar som du har åtkomst till.",

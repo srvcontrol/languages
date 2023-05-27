@@ -2,6 +2,7 @@
   "error": {
     "title": "Oops!",
     "messages": {
+      "failed_console": "Something went wrong while communicating with the SRVControl console service.",
       "failed_database": "Something went wrong while communicating with my database.",
       "failed_pterodactyl": "Something went wrong while communicating with your panel.",
       "failed_encrypt": "Something went wrong while encrypting your API key.",
@@ -10,6 +11,7 @@
       "no_profile": "You don't have a profile.",
       "no_active_profile": "You don't have an active profile.",
       "server_not_found": "I couldn't find a server with the name or ID '{{ .server }}'.",
+      "console_not_found": "I couldn't find a console with the name '{{ .console }}'.",
       "server_offline": "The server '{{ .server }}' is currently offline."
     }
   },
@@ -17,6 +19,43 @@
     "title": "Success!"
   },
   "command": {
+    "console": {
+      "name": "console",
+      "create": {
+        "name": "create",
+        "description": "Create a new console session.",
+        "messages": {
+          "created_session": "Successfully created the console session '{{ .console }}'."
+        },
+        "options": {
+          "console_name": {
+            "name": "name",
+            "description": "What would you like to call this session?"
+          },
+          "server": {
+            "name": "server",
+            "description": "Which one of your servers is this session for?"
+          },
+          "webhook_url": {
+            "name": "webhook_url",
+            "description": "The Discord webhook URL to send messages to."
+          }
+        }
+      },
+      "delete": {
+        "name": "delete",
+        "description": "Delete one of your console sessions.",
+        "messages": {
+          "deleted_session": "The console session '{{ .console }}' was deleted."
+        },
+        "options": {
+          "console": {
+            "name": "console",
+            "description": "Which console session would you like to delete?"
+          }
+        }
+      }
+    },
     "servers": {
       "name": "servers",
       "description": "View the servers you have access to.",
