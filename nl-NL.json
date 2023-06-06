@@ -1,0 +1,226 @@
+{
+  "error":{
+    "title":"Oeps!",
+    "messages":{
+      "failed_console":"Er is iets misgegaan bij het communiceren met de SRVControl console service.",
+      "failed_database":"Er is iets misgegaan bij het communiceren met mijn database.",
+      "failed_pterodactyl":"Er is iets misgegaan bij het communiceren met jouw paneel.",
+      "failed_encrypt":"Er is iets misgegaan bij het versleutelen van jouw API-sleutel.",
+      "failed_decrypt":"Er is iets misgegaan bij het ontcijferen van jouw API-sleutel.",
+      "invalid_key":"Jouw API-sleutel is ongeldig.",
+      "no_profile":"Je hebt geen profiel.",
+      "no_active_profile":"Je hebt geen actief profiel.",
+      "server_not_found":"Ik kon geen server vinden met de naam of ID '{{ .server }}'.",
+      "console_not_found":"Ik kon geen console vinden met de naam '{{ .console }}'.",
+      "server_offline":"De server '{{ .server }}' is momenteel offline."
+    }
+  },
+  "success":{
+    "title":"Succes!"
+  },
+  "command":{
+    "console":{
+      "name":"console",
+      "create":{
+        "name":"create",
+        "description":"Maak een nieuwe consolesessie aan.",
+        "messages":{
+          "created_session":"De consolesessie '{{ .console }}' is succesvol aangemaakt."
+        },
+        "options":{
+          "console_name":{
+            "name":"naam",
+            "description":"Hoe wil je deze sessie noemen?"
+          },
+          "server":{
+            "name":"server",
+            "description":"Voor welke van jouw servers is deze sessie bedoeld?"
+          },
+          "webhook_url":{
+            "name":"webhook_url",
+            "description":"De Discord-webhook-URL om berichten naartoe te sturen."
+          }
+        }
+      },
+      "delete":{
+        "name":"delete",
+        "description":"Verwijder een van je consolesessies.",
+        "messages":{
+          "deleted_session":"De consolesessie '{{ .console }}' is verwijderd."
+        },
+        "options":{
+          "console":{
+            "name":"console",
+            "description":"Welke consolesessie wil je verwijderen?"
+          }
+        }
+      }
+    },
+    "servers":{
+      "name":"servers",
+      "description":"Bekijk de servers waar je toegang toe hebt.",
+      "embed":{
+        "title":"Jouw Servers",
+        "fields":{
+          "relation":{
+            "name":"Relatie",
+            "owner":"Eigenaar",
+            "subuser":"Subgebruiker"
+          },
+          "disk":{
+            "name":"Schijfruimte"
+          }
+        }
+      },
+      "menu":{
+        "placeholder":"Selecteer een server."
+      },
+      "buttons":{
+        "console":"Console",
+        "files":"Bestanden",
+        "databases":"Databases"
+      }
+    },
+    "power":{
+      "name":"Power",
+      "description":"Beheer de stroom voor jouw server.",
+      "messages":{
+        "sent_start":"Het startsignaal is naar jouw server gestuurd.",
+        "sent_restart":"Het herstartsignaal is naar jouw server gestuurd.",
+        "sent_stop":"Het stopsignaal is naar jouw server gestuurd.",
+        "sent_kill":"Het killsignaal is naar jouw server gestuurd."
+      },
+      "embed":{
+        "title":"Power",
+        "description":"Gebruik de onderstaande knoppen om stroomsignalen naar jouw server te sturen.",
+        "fields":{
+          "current_state":{
+            "name":"Huidige Status",
+            "values":{
+              "running":"Online",
+              "offline":"Offline",
+              "starting":"Aan het opstarten",
+              "stopping":"Aan het afsluiten"
+            }
+          }
+        }
+      },
+      "buttons":{
+        "start":"Start",
+        "restart":"Herstart",
+        "stop":"Stop",
+        "kill":"Kill"
+      },
+      "options":{
+        "server":{
+          "name":"server",
+          "description":"De naam of ID van een server."
+        }
+      }
+    },
+    "profile":{
+      "name":"profiel",
+      "messages":{
+        "no_profile":"Je hebt geen profiel met de naam '{{ .profile }}'.",
+        "already_exists":"Je hebt al een profiel met de naam '{{ .profile }}'.",
+        "max_profiles":"Je kunt niet meer dan {{ .limit }} profielen hebben."
+      },
+      "create":{
+        "name":"create",
+        "description":"Maak een nieuw profiel aan.",
+        "messages":{
+          "invalid_domain":"Het domein '{{ .domain }}' is ongeldig.",
+          "created":"Het profiel '{{ .profile }}' is succesvol aangemaakt!"
+        },
+        "options":{
+          "profile_name":{
+            "name":"naam",
+            "description":"Hoe wil je dit profiel noemen?"
+          },
+          "panel":{
+            "name":"paneel",
+            "description":"Wat is jouw paneeldomein?"
+          },
+          "apikey":{
+            "name":"apisleutel",
+            "description":"Wat is jouw API-sleutel?"
+          }
+        }
+      },
+      "default":{
+        "name":"default",
+        "description":"Stel een profiel in als standaard.",
+        "messages":{
+          "changed":"Je standaardprofiel is nu '{{ .profile }}'."
+        },
+        "options":{
+          "profile_name":{
+            "name":"profiel",
+            "description":"Welk profiel wil je instellen als standaard?"
+          }
+        }
+      },
+      "delete":{
+        "name":"delete",
+        "description":"Verwijder een profiel.",
+        "messages":{
+          "deleted":"Je hebt het profiel '{{ .profile }}' verwijderd.",
+          "cannot_delete_default":"Je kunt je standaardprofiel niet verwijderen."
+        },
+        "options":{
+          "profile_name":{
+            "name":"profiel",
+            "description":"Welk profiel wil je verwijderen?"
+          }
+        }
+      },
+      "rename":{
+        "name":"hernoem",
+        "description":"Hernoem een van jouw profielen.",
+        "messages":{
+          "renamed":"Het profiel '{{ .oldname }}' is hernoemd naar '{{ .newname }}'."
+        },
+        "options":{
+          "profile_name":{
+            "name":"profiel",
+            "description":"Welk profiel wil je hernoemen?"
+          },
+          "new_name":{
+            "name":"nieuwe_naam",
+            "description":"De nieuwe naam van het profiel."
+          }
+        }
+      },
+      "use":{
+        "name":"gebruik",
+        "description":"Gebruik een specifiek profiel op deze server.",
+        "messages":{
+          "using":"Je gebruikt nu het profiel '{{ .profile }}' op deze server."
+        },
+        "options":{
+          "profile_name":{
+            "name":"naam",
+            "description":"Welk profiel wil je gebruiken?"
+          }
+        }
+      }
+    },
+    "send":{
+      "name":"send",
+      "description":"Stuur een commando naar een van jouw servers.",
+      "messages":{
+        "sent":"Het commando is succesvol verzonden naar de server '{{ .server }}'."
+      },
+      "options":{
+        "server":{
+          "name":"server",
+          "description":"De naam of ID van een server."
+        },
+        "command":{
+          "name":"commando",
+          "description":"Het commando om naar de server te sturen."
+        }
+      }
+    }
+  }
+}
