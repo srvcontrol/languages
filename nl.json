@@ -19,9 +19,9 @@
     "title":"Succes!"
   },
   "loading": {
-    "title": "Loading...",
+    "title": "Laden...",
     "messages": {
-      "loading_servers": "Loading your servers, this may take a while."
+      "loading_servers": "Je servers zijn aan het laden, dit kan even duren."
     }
   },
   "command":{
