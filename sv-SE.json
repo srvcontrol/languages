@@ -18,6 +18,12 @@
   "success": {
     "title": "Lyckat!"
   },
+  "loading": {
+    "title": "Loading...",
+    "messages": {
+      "loading_servers": "Loading your servers, this may take a while."
+    }
+  },
   "command": {
     "console": {
       "name": "console",
