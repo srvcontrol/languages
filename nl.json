@@ -45,7 +45,7 @@
           },
           "channel":{
             "name":"channel",
-            "description":"The Discord channel you'd like console output to go to."
+            "description":"Het discord kanaal waar de console logs komen."
           }
         }
       },
