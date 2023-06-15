@@ -2,6 +2,7 @@
   "error":{
     "title":"Oeps!",
     "messages":{
+      "failed_create_webhook": "I was unable to create a webhook for your console. Please check I have permission to manage webhooks.",
       "failed_console":"Er is iets misgegaan bij het communiceren met de SRVControl console service.",
       "failed_database":"Er is iets misgegaan bij het communiceren met mijn database.",
       "failed_pterodactyl":"Er is iets misgegaan bij het communiceren met jouw paneel.",
@@ -42,9 +43,9 @@
             "name":"server",
             "description":"Voor welke van jouw servers is deze sessie bedoeld?"
           },
-          "webhook_url":{
-            "name":"webhook_url",
-            "description":"De Discord-webhook-URL om berichten naartoe te sturen."
+          "channel":{
+            "name":"channel",
+            "description":"The Discord channel you'd like console output to go to."
           }
         }
       },
