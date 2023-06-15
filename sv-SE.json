@@ -2,7 +2,7 @@
   "error": {
     "title": "Hoppsan!",
     "messages": {
-      "not_valid_text_channel": "The the provided channel isn't a valid text channel.",
+      "not_valid_text_channel": "The provided channel isn't a valid text channel.",
       "failed_create_webhook": "I was unable to create a webhook for your console. Please check I have permission to manage webhooks.",
       "failed_console": "Something went wrong while communicating with the SRVControl console service.",
       "failed_database": "Något gick fel vid kommunikation med min databas.",
