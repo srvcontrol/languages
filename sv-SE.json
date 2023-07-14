@@ -2,9 +2,9 @@
   "error": {
     "title": "Hoppsan!",
     "messages": {
-      "not_valid_text_channel": "The provided channel isn't a valid text channel.",
-      "failed_create_webhook": "I was unable to create a webhook for your console. Please check I have permission to manage webhooks.",
-      "failed_console": "Something went wrong while communicating with the SRVControl console service.",
+      "not_valid_text_channel": "Den angivna kanalen är inte en giltig textkanal.",
+      "failed_create_webhook": "Jag kunde inte skapa en webhook för din konsol. Kontrollera att jag har behörighet att hantera webhooks.",
+      "failed_console": "Något gick fel under kommunikationen med SRVControl konsol.",
       "failed_database": "Något gick fel vid kommunikation med min databas.",
       "failed_pterodactyl": "Något gick fel vid kommunikation med din panel.",
       "failed_encrypt": "Något gick fel vid kryptering av din API-nyckel.",
@@ -13,7 +13,7 @@
       "no_profile": "Du har ingen profil.",
       "no_active_profile": "Du har ingen aktiv profil.",
       "server_not_found": "Jag kunde inte hitta en server med namnet eller ID:et '{{ .server }}'.",
-      "console_not_found": "I couldn't find a console with the name '{{ .console }}'.",
+      "console_not_found": "Jag kunde inte hitta en konsol med namnet '{{ .console }}'.",
       "server_offline": "Servern '{{ .server }}' är för närvarande offline."
     }
   },
@@ -21,45 +21,45 @@
     "title": "Lyckat!"
   },
   "loading": {
-    "title": "Loading...",
+    "title": "Laddar...",
     "messages": {
-      "loading_servers": "Loading your servers, this may take a while."
+      "loading_servers": "Laddar dina servrar, detta kan ta en stund."
     }
   },
   "command": {
     "console": {
-      "name": "console",
+      "name": "konsol",
       "create": {
-        "name": "create",
-        "description": "Create a new console session.",
+        "name": "skapa",
+        "description": "Skapa en ny konsol session.",
         "messages": {
-          "created_session": "Successfully created the console session '{{ .console }}'."
+          "created_session": "Konsol sessionen skapades '{{ .console }}'."
         },
         "options": {
           "console_name": {
-            "name": "name",
-            "description": "What would you like to call this session?"
+            "name": "namn",
+            "description": "Vad skulle du vilja kalla denna session?"
           },
           "server": {
             "name": "server",
-            "description": "Which one of your servers is this session for?"
+            "description": "Vilken av dina servrar är den här sessionen för?"
           },
           "channel": {
-            "name": "channel",
-            "description": "The Discord channel you'd like console output to go to."
+            "name": "kanal",
+            "description": "Discord kanalen du vill att konsol utgången ska gå till."
           }
         }
       },
       "delete": {
-        "name": "delete",
-        "description": "Delete one of your console sessions.",
+        "name": "radera",
+        "description": "Ta bort en av dina konsol sessioner.",
         "messages": {
-          "deleted_session": "The console session '{{ .console }}' was deleted."
+          "deleted_session": "Konsol sessionen '{{ .console }}' togs bort."
         },
         "options": {
           "console": {
-            "name": "console",
-            "description": "Which console session would you like to delete?"
+            "name": "konsol",
+            "description": "Vilken konsol session vill du ta bort?"
           }
         }
       }
