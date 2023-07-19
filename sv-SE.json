@@ -14,7 +14,8 @@
       "no_active_profile": "Du har ingen aktiv profil.",
       "server_not_found": "Jag kunde inte hitta en server med namnet eller ID:et '{{ .server }}'.",
       "console_not_found": "Jag kunde inte hitta en konsol med namnet '{{ .console }}'.",
-      "server_offline": "Servern '{{ .server }}' är för närvarande offline."
+      "server_offline": "Servern '{{ .server }}' är för närvarande offline.",
+      "no_servers": "You don't have any servers."
     }
   },
   "success": {
