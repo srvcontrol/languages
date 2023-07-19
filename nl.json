@@ -15,7 +15,7 @@
       "server_not_found":"Ik kon geen server vinden met de naam of ID '{{ .server }}'.",
       "console_not_found":"Ik kon geen console vinden met de naam '{{ .console }}'.",
       "server_offline":"De server '{{ .server }}' is momenteel offline.",
-      "no_servers": "You don't have any servers."
+      "no_servers": "Je hebt geen servers."
     }
   },
   "success":{
